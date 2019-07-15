@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <title>Vue Basics</title>
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body>
+<div class="nav-bar"></div>
+<div id="mamaStore">
+  <div class="cart">
+    <p>Cart {{cart.length}}</p>
+  </div>
+  <product :premium="premium" @add-to-cart="updateCart" @remove-to-cart="removeItem">
+  </product>
+  <product-details :details=details></product-details>
+
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>
